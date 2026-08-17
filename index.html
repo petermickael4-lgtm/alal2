@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقعي التفاعلي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- الحاوية الأساسية للموبايل -->
+    <main class="mobile-app">
+        
+        <header class="app-header">
+            <h1>نشاط القبطي(يوحنا)</h1>
+        </header>
+
+        <!-- قسم الفيديو -->
+         <!-- قسم الفيديو -->
+        <section class="card">
+            <!-- خلينا الحاوية دي متجاوبة عشان الفيديو يصغر ويكبر مع الموبايل -->
+            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                
+                <!-- ده كود اليوتيوب بتاعك بعد ما ظبطنا مقاساته للموبايل -->
+                <iframe 
+                    src="https://www.youtube.com/embed/DBfCUe1-_n8?si=egYoN7XVXrUO1cg3"
+                    title="YouTube video player" 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 15px;"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+        <!-- قسم المعلومات 1 -->
+        <section class="card info-section">
+            <h2>معلومات سريعة </h2>
+            <p>سم عبري ومعناه "إلهي يهوه" والصيغة اليونانية لهذا الاسم هي إلياس (أو إليا) وتستعمل أحيانًا في العربية. وهو:
+
+نبي عظيم عاش في المملكة الشمالية. وبما أنه يدعى التشبي فيرجّح أنه ولد في "تشبة" ولكنه عاش في جلعاد</p>
+        </section>
+
+        <!-- قسم المعلومات 2 -->
+        <section class="card info-section">
+            <h2> قصةايليا</h2>
+            <p>إيليا نبي عظيم معناه "إلهي يهوه"، عاش في المملكة الشمالية واشتهر بزيّ الشعر وبسكن البرية.
+
+تنبأ بامتناع المطر بسبب انحراف إيزابل وآخاب للعبادة الوثنية، وعاله الله عبر الغربان ثم لدى أرملة صرفة.
+
+أقام ابن أرملة صرفة من الموت بصلاته، وضاعف لها الدقيق والزيت طوال سنوات الجفاف.
+
+واجه أنبياء البعل في جبل الكرمل نزول نار من السماء، فأنزل الرب ناراً أكلت المحرقة وقتل أنبياء البعل.
+
+هرب إلى جبل حوريب خوفاً من إيزابل، وهناك كلمّه الله في صوت منخفض خفيف وأمره بتعيين أليشع خلفاً له.
+
+وبّخ الملك آخاب وأنبه بموت شنيع وخراب بيته بسبب قتله لنابوت واستيلائه على كرمه.
+
+أنبأ بموت الملك أحزيا، وأنزلت صلاته ناراً من السماء التهمت فرقتين من الجنود أُرسلوا للقبض عليه.
+
+صعد إلى السماء بمركبة وفرسان من نار في العاصفة عند نهر الأردن، وترك رداءه لتلميذه أليشع.
+
+ورد ذكره في العهد الجديد كمثال لقوة صلاة البار، وارتبط بشخصية يوحنا المعمدان وظهر في حادثة التجلي.</p>
+        </section>
+
+        <!-- قسم الأسئلة (الكويز) -->
+        <section class="card quiz-section">
+            <h2>اختبر معلوماتك</h2>
+            <form id="quiz-form">
+                
+                <!-- السؤال الأول -->
+                <div class="question-block">
+                    <p class="question-title">1. السؤال الأول:أين واجه النبي إيليا أنبياء البعل في التحدي الشهير لنزول النار من السماء؟</p>
+                    <label><input type="radio" name="q1" value="a">جبل نيبو</label>
+                    <label><input type="radio" name="q1" value="b"> جبل الكرمل</label>
+                    <label><input type="radio" name="q1" value="c"> جبل سيناء</label>
+                </div>
+
+                <!-- السؤال الثاني -->
+                <div class="question-block">
+                    <p class="question-title">2. السؤال الثاني:كيف صعد النبي إيليا إلى السماء بحسب ما ورد في سفر الملوك الثاني؟</p>
+                    <label><input type="radio" name="q2" value="a">في مركبة وفرسان من نار وفي العاصفة</label>
+                    <label><input type="radio" name="q2" value="b"> على سحابة بيضاء</label>
+                    <label><input type="radio" name="q2" value="c"> بواسطة مجموعة من الملائكة</label>
+                </div>
+
+                <!-- السؤال الثالث -->
+                <div class="question-block">
+                    <p class="question-title">3. السؤال الثالث:من هو النبي الذي كان تلميذاً وخلفاً لإيليا وأخذ رداءه بعد صعوده؟</p>
+                    <label><input type="radio" name="q3" value="a"> إرميا</label>
+                    <label><input type="radio" name="q3" value="b">أليشع</label>
+                    <label><input type="radio" name="q3" value="c">أشعياء</label>
+                </div>
+
+                <button type="submit" class="submit-btn">تأكيد الإجابات</button>
+            </form>
+            
+            <!-- هنا ستظهر النتيجة (برافو أو حاول تاني) -->
+            <div id="quiz-result" class="result-box"></div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

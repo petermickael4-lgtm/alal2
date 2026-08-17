@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
+
+:root {
+    --primary: #6C63FF;
+    --secondary: #FF6584;
+    --bg-color: #f0f2f5;
+    --card-bg: #ffffff;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center; /* توسيط التطبيق في الشاشات الكبيرة */
+}
+
+/* تحجيم الموقع ليكون مثل الموبايل بالضبط */
+.mobile-app {
+    width: 100%;
+    max-width: 480px; /* مقاس الموبايل */
+    min-height: 100vh;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* العنوان */
+.app-header h1 {
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* ستايل الكروت (جامد جداً) */
+.card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+/* الفيديو */
+.video-container {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-container video {
+    width: 100%;
+    display: block;
+}
+
+/* المعلومات */
+.info-section h2 {
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-section h2::before {
+    content: '';
+    width: 6px;
+    height: 20px;
+    background: var(--secondary);
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.info-section p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* الأسئلة */
+.quiz-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.question-block {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #e5e7eb;
+}
+
+.question-block:last-of-type {
+    border-bottom: none;
+}
+
+.question-title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+/* اختيارات الإجابة */
+.question-block label {
+    display: block;
+    background: var(--bg-color);
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 0.95rem;
+}
+
+.question-block label:hover {
+    background: #e0e7ff;
+}
+
+.question-block input[type="radio"] {
+    margin-left: 10px;
+    accent-color: var(--primary);
+    transform: scale(1.2);
+}
+
+/* زر التأكيد */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
+    transition: transform 0.2s;
+    margin-top: 10px;
+}
+
+.submit-btn:active {
+    transform: scale(0.96);
+}
+
+/* رسالة النتيجة */
+.result-box {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 15px;
+    border-radius: 15px;
+    display: none;
+    animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.success-msg {
+    background: #d1fae5;
+    color: #059669;
+    display: block;
+}
+
+.error-msg {
+    background: #fee2e2;
+    color: #dc2626;
+    display: block;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
